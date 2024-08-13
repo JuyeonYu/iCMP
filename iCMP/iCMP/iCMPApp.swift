@@ -12,7 +12,7 @@ import SwiftData
 struct iCMPApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            ClipboardContent.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +25,8 @@ struct iCMPApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+          MainView()
         }
         .modelContainer(sharedModelContainer)
     }
